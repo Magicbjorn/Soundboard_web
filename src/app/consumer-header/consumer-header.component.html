@@ -1,0 +1,76 @@
+<div class="header-wrapper">
+	<div class="header-top-wrapper">
+		<div class="container">
+			<div class="header-top">
+				<div class="language-selector" >
+					<div class="language-selected" [ngClass]="showLanguage ? 'up' : 'down'" (click)="showLanguages()">Nederlands</div>
+					<ul *ngIf="showLanguage">
+	                    <li>
+	                        <a id="lngSelect_nl" class="language-option" (click)="changeLanguage($event)">Nederlands</a>
+	                    </li>
+	                    <li>
+	                    	<div class="horizontal-seperator"></div>
+	                    </li>
+	                    <li>
+	                        <a id="lngSelect_en" class="language-option" (click)="changeLanguage($event)">English</a>
+	                    </li>
+	                    <li>
+	                    	<div class="horizontal-seperator"></div>
+	                    </li>
+	                    <li>
+	                        <a id="lngSelect_fr" class="language-option" (click)="changeLanguage($event)">Français</a>
+	                    </li>
+	                </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom-wrapper">
+		<div class="container">
+			<div class="header-bottom">
+				<div class="corporate-logo">
+					<a href="/track/login"></a>
+				</div>
+				<div class="hamburger-icon" (click)="hamburgerClick()"></div>
+				<ul class="main-menu">
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+				</ul>
+				<div class="mobile-menu-close-icon" [ngClass]="showMobileMenu ? 'show-icon' : 'hide-icon'" (click)="closeMobileMenu()"></div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-wrapper" [ngClass]="showMobileMenu ? 'show-mobile-menu' : 'hide-mobile-menu'">
+		<div class="mobile-menu">
+			<ul>
+				<li class="mobile-menu-home">
+					<a href="/track/login">Home</a>
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+				<li class="horizontal-seperator-mobile"></li>
+				<li>
+					<a href="/contact">Privacy en Cookiebeleid</a>
+				</li>
+				<li class="horizontal-seperator-mobile"></li>
+				<li>
+					<div class="language-selected" [ngClass]="showLanguage ? 'up' : 'down'" (click)="showLanguages()">Nederlands</div>
+				</li>
+				<ul *ngIf="showLanguage">
+					<li class="horizontal-seperator-mobile"></li>
+                    <li id="lngSelect_nl" class="language-option" (click)="changeLanguage($event)">Nederlands</li>
+                    <li class="horizontal-seperator-mobile"></li>
+                    <li id="lngSelect_en" class="language-option" (click)="changeLanguage($event)">English</li>
+                    <li class="horizontal-seperator-mobile"></li>
+                    <li id="lngSelect_fr" class="language-option" (click)="changeLanguage($event)">Français</li>
+                </ul>
+                <li class="horizontal-seperator-mobile"></li>
+				<li class="mobile-menu-close">
+					<a href="/track/login">Afsluiten</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

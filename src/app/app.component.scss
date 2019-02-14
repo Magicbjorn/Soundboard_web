@@ -1,0 +1,52 @@
+$res-desktop: "screen and (max-width: 1200px)";
+$res-tablet: "screen and (max-width: 991px)";
+$res-phone: "screen and (max-width: 767px)";
+$res-phone-small: "screen and (max-width: 449px)";
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin text-selection($property) {
+    -webkit-touch-callout: $property;
+    -webkit-user-select: $property;
+    -khtml-user-select: $property;
+    -moz-user-select: $property;
+    -ms-user-select: $property;
+    user-select: $property;
+}
+
+@import './consumer-header/consumer-header.component';
+@import './consumer-footer/consumer-footer.component';
+@import './page-not-found/page-not-found.component';
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p,
+a,
+li {
+    font-size: 14px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.hide-on-phone {
+    @media #{$res-phone} {
+        display: none;
+    }
+}

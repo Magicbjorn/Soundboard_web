@@ -1,0 +1,30 @@
+<div id="footer-wrapper" class="footer-wrapper">
+	<div class="container">
+		<div class="footer">
+			<ul>
+				<li>
+					© Copyright 2014 - {{currentYear}} Dynalogic
+				</li>
+				<li class="vertical-seperator">
+					|
+				</li>
+				<li>Alle rechten voorbehouden</li>
+				<li class="vertical-seperator">
+					|
+				</li>
+				<li>
+					<a href="/privacy-and-cookie">Privacy en cookiebeleid</a>
+				</li>
+				<li class="vertical-seperator">
+					|
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<div class="to-top-wrapper">
+			<div class="to-top-button" [ngClass]="showScrollToTop ? 'show-scroll-to-top' : 'hide-scroll-to-top'" (click)="scrollToTop()"></div>
+		</div>
+	</div>
+</div>

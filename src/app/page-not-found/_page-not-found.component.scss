@@ -1,0 +1,123 @@
+.main-content {
+	.four-oh-four-title {
+		margin: 70px 0px 30px 0px;
+		color: #89053f;
+	}
+
+	.four-oh-four-paragraph {
+		margin: 0px 0px 100px 0px;
+		font-size: 14px;
+
+		@media #{$res-phone} {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	.link {
+	    text-decoration: underline;
+	    cursor: pointer;
+	}
+
+	.faq-wrapper {
+		border: 1px solid #cccccc;
+		padding: 25px;
+
+		.faq-title {
+			font-size: 24px;
+			padding: 25px 0px;
+
+			@media #{$res-phone} {
+				padding: 0px 0px 25px 0px;
+			}
+		}
+
+		.faq-questions {
+			list-style: none;
+			padding: 0;
+
+			.faq-question {
+				@include text-selection(none);
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 5px 0px;
+				padding: 10px 0px;
+				color: #89053f;
+				font-weight: 400;
+				cursor: pointer;
+				position: relative;
+
+				p {
+					display: inline-block;
+    				margin: 0;
+    				max-width: 90%;
+				}
+
+				.faq-arrow {
+					content: "";
+					display: inline-block;
+		 			background: url('../../assets/img/arrow_up_black.png') no-repeat;
+					background-size: 10px;
+					width: 10px;
+					height: 6px;
+					transform: rotate(180deg);
+					position: absolute;
+					top: calc(50% - 5px);
+					right: 15px;
+
+					&.open {
+						transform: rotate(0deg);
+					}
+				}
+
+				.faq-answer {
+					display: none;
+					border: 1px solid #cccccc;
+					margin: 15px 0px 0px 25px;
+					padding: 15px;
+
+					&.open {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.faq-more-link {
+			text-decoration: underline;
+
+			&:after {
+				content: "";
+				display: inline-block;
+	 			background: url('../../assets/img/arrow_up_black.png') no-repeat;
+				background-size: 10px;
+				width: 10px;
+				height: 6px;
+				transform: rotate(90deg);
+				margin-left: 5px
+			}
+		}
+
+		.faq-image {
+			display: block;
+			vertical-align: middle;
+			position: relative;
+			transform: translate(0px, -50%);
+			top: 50%;
+			
+			img {
+				max-width: 100%;
+			    height: auto;
+			}
+
+			.faq-image-footer {
+				background-color: #89053f;
+				color: #ffffff;
+				padding: 15px;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

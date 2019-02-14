@@ -1,0 +1,37 @@
+<app-consumer-header></app-consumer-header>
+<div class="main-content">
+    <div class="container">
+        <h1 class="four-oh-four-title">Pagina niet gevonden. (404)</h1>
+        <p class="four-oh-four-paragraph">De pagina die u zocht kan niet worden gevonden. Dit kan komen doordat de pagina niet meer bestaat,
+			verplaatst of verwijderd is. Of doordat er een typefout is gemaakt rijdens het invoeren van het adres. Klik
+			<span class="link" (click)="goBack()">hier</span>
+			om terug te keren naar onze homepagina of bekijk de tips in onze veelgestelde vragen
+        </p>
+        <div class="faq-wrapper">
+        	<div class="row">
+	        	<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+		        	<h3 class="faq-title">Veelgestelde vragen</h3>
+		        	<ul class="faq-questions">
+		        		<li *ngFor="let faqQuestion of faqQuestions" class="faq-question" id="{{faqQuestion.id}}" (click)="faqClicked($event)">
+		        			<p>{{faqQuestion.question}}</p><span class="faq-arrow"></span>
+		        			<div class="faq-answer">
+		        				<h3>I have no idea what this content is</h3>
+		        				<p>I am just placing placeholder stuff here, need to ask Roy what to do with this</p>
+		        			</div>
+		        		</li>
+		        	</ul>
+		        	<a class="faq-more-link">Toon meer veelgestelde vragen</a>
+		        </div>
+		        <div class="col-lg-6 col-md-6 hide-on-phone">
+		        	<div class="faq-image">
+		        		<img src="../../assets/img/faq_image.png" />
+		        		<div class="faq-image-footer">
+			        		<p>Voor overige vragen m.b.t. uw bestelling, kunt u contact opnemen met de afzender.</p>
+			        	</div>
+		        	</div>
+		        </div>
+		    </div>
+        </div>
+    </div>
+</div>
+<app-consumer-footer></app-consumer-footer>
